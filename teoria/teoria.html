@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conteúdo Interativo — Lógica de Programação</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 48px 24px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      margin: 0;
+      color: #94a3b8;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .topic {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .topic__title {
+      margin: 0 0 16px;
+      font-size: 1.5rem;
+      color: #fbbf24;
+    }
+
+    .topic__block {
+      margin-bottom: 16px;
+    }
+
+    .topic__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+
+    .topic__example {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: "Courier New", monospace;
+      font-size: 0.95rem;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    .interaction {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .interaction__button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .interaction__button:hover {
+      background: #7dd3fc;
+      transform: scale(1.05);
+    }
+
+    .interaction__spoiler {
+      display: none;
+      background: #164e63;
+      border-left: 3px solid #38bdf8;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .interaction__spoiler.is-visible {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conteúdo Interativo</h1>
+    <p>Explore os temas abaixo no seu próprio ritmo — clique nos pontos de interrogação</p>
+  </header>
+
+  <main>
+    <section class="topic">
+      <h2 class="topic__title">Algoritmos</h2>
+
+      <div class="topic__block">
+        <span class="topic__label">Conceito</span>
+        <p>Um algoritmo é uma sequência de passos bem definidos para resolver um problema. Assim como uma receita de bolo diz exatamente o que fazer e em que ordem, um algoritmo descreve as instruções que um programa deve seguir.</p>
+      </div>
+
+      <div class="topic__block">
+        <span class="topic__label">Exemplo</span>
+        <div class="topic__example">1. Pegar dois números
+2. Somar os dois números
+3. Mostrar o resultado</div>
+      </div>
+
+      <div class="interaction">
+        <button class="interaction__button" type="button" aria-label="Revelar spoiler">?</button>
+        <div class="interaction__spoiler"></div>
+      </div>
+    </section>
+
+    <section class="topic">
+      <h2 class="topic__title">Variáveis</h2>
+
+      <div class="topic__block">
+        <span class="topic__label">Conceito</span>
+        <p>Uma variável é um espaço na memória do computador que guarda um valor, como um número, um texto ou um resultado. Esse valor pode mudar ao longo da execução do programa — daí o nome "variável".</p>
+      </div>
+
+      <div class="topic__block">
+        <span class="topic__label">Exemplo</span>
+        <div class="topic__example">let idade = 25;
+let nome = "Maria";</div>
+      </div>
+
+      <div class="interaction">
+        <button class="interaction__button" type="button" aria-label="Revelar spoiler">?</button>
+        <div class="interaction__spoiler"></div>
+      </div>
+    </section>
+
+    <section class="topic">
+      <h2 class="topic__title">Condicionais</h2>
+
+      <div class="topic__block">
+        <span class="topic__label">Conceito</span>
+        <p>Condicionais são estruturas que permitem ao programa tomar decisões: "se isso acontecer, faça aquilo; senão, faça outra coisa". É assim que um programa consegue reagir de formas diferentes dependendo da situação.</p>
+      </div>
+
+      <div class="topic__block">
+        <span class="topic__label">Exemplo</span>
+        <div class="topic__example">if (idade >= 18) {
+  console.log("Maior de idade");
+} else {
+  console.log("Menor de idade");
+}</div>
+      </div>
+
+      <div class="interaction">
+        <button class="interaction__button" type="button" aria-label="Revelar spoiler">?</button>
+        <div class="interaction__spoiler"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Continue explorando — cada clique revela um pouco mais de como tudo isso funciona.</p>
+  </footer>
+
+  <script>
+    const spoilerText = "Essa página funciona do jeito que funciona graças à integração entre HTML, CSS e JavaScript. Boa parte do que acontece aqui — inclusive este próprio texto aparecendo — é resultado do JavaScript.";
+
+    const buttons = document.querySelectorAll(".interaction__button");
+
+    buttons.forEach((button) => {
+      const spoiler = button.nextElementSibling;
+
+      button.addEventListener("click", () => {
+        const isVisible = spoiler.classList.toggle("is-visible");
+        spoiler.textContent = spoilerText;
+        button.textContent = isVisible ? "×" : "?";
+      });
+    });
+  </script>
+</body>
+</html>

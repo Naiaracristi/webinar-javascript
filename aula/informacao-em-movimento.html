@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informação em movimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress-label"><span id="current">01</span> / 07</div>
+
+  <div class="stage">
+    <div class="track" id="track">
+
+      <section id="s0">
+        <div class="inner">
+          <p class="lede" style="color:var(--muted); font-size:1rem; margin-bottom:1.6rem;">antes de qualquer sintaxe</p>
+          <h1 class="statement">Programar é mover<br>informação de um lugar<br>pro outro — e, no meio<br>do caminho, transformar ela.</h1>
+          <p class="support">Sintaxe, framework, paradigma: tudo isso é detalhe de <em>como</em> essa movimentação acontece. O princípio, reduzido ao osso, é só esse.</p>
+          <div class="flow">
+            <div class="flow-line">
+              <div class="flow-node n1"></div>
+              <div class="flow-node n2"></div>
+              <div class="flow-node n3"></div>
+              <div class="packet"></div>
+            </div>
+          </div>
+          <p class="flow-caption">entrada → transformação → saída</p>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s1">
+        <div class="inner">
+          <h2 class="statement" style="font-size:clamp(1.8rem,3.4vw,2.6rem);">Três papéis, três níveis de controle</h2>
+          <p class="support" style="margin-bottom:0.5rem;">Quanto cada camada pode realmente fazer com a informação.</p>
+          <div class="roles">
+            <div class="role-row">
+              <div class="role-name">HTML</div>
+              <div class="role-desc">descreve o que existe</div>
+              <div class="gauge html"><span></span></div>
+            </div>
+            <div class="role-row">
+              <div class="role-name">CSS</div>
+              <div class="role-desc">descreve como aparece</div>
+              <div class="gauge css"><span></span></div>
+            </div>
+            <div class="role-row">
+              <div class="role-name">JS</div>
+              <div class="role-desc">é onde você escreve a decisão</div>
+              <div class="gauge js"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s2">
+        <div class="inner">
+          <h2 class="statement" style="font-size:clamp(1.9rem,3.6vw,2.8rem);">HTML: informação estática</h2>
+          <p class="lede">O que você escreve é exatamente o que existe — sempre, até outra coisa mudar isso.</p>
+          <div class="html-demo">
+&lt;<span class="tag">button</span> <span class="attr">id</span>=<span class="val">"comprar"</span>&gt;Comprar&lt;/<span class="tag">button</span>&gt;
+          </div>
+          <div class="frozen-badge"><span class="frozen-dot"></span> esse botão não faz nada sozinho, hoje, amanhã, nunca</div>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s3">
+        <div class="inner">
+          <h2 class="statement" style="font-size:clamp(1.9rem,3.6vw,2.8rem);">CSS: reação fechada</h2>
+          <p class="lede">Existe uma fresta de reação — <code>:hover</code>, <code>:focus</code>, <code>@media</code> — mas é um conjunto pré-definido de gatilhos, não uma lógica que você escreve.</p>
+          <div class="css-demo">
+            <button class="css-btn">passe o mouse ou dê tab</button>
+            <p class="css-hint">isso é só CSS — nenhuma linha de JS envolvida</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s4">
+        <div class="inner">
+          <h2 class="statement" style="font-size:clamp(1.9rem,3.6vw,2.8rem);">JS: onde você escreve a lógica</h2>
+          <p class="lede">Aqui a informação vira variável: pode ser lida, testada, guardada, combinada. JS não decide nada sozinho — é só a ferramenta. Quem decide é quem escreve o código, e isso depende muito mais de entender o problema do que de saber sintaxe de cor.</p>
+          <div class="js-demo">
+            <input id="playground-input" type="text" placeholder="digite alguma coisa" autocomplete="off">
+            <div class="js-output" id="playground-output">a transformação aparece aqui</div>
+            <div class="js-meta" id="playground-meta">0 caracteres</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s5">
+        <div class="inner" style="max-width: 1040px;">
+          <h2 class="statement" style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Mesmo princípio, três formas comuns</h2>
+          <p class="support" style="margin-bottom:0.4rem;">Entrada, transformação e saída — em três telas que você já usou essa semana.</p>
+
+          <div class="practice-grid">
+
+            <div class="practice-card">
+              <h3>Login</h3>
+              <div class="field" id="demo-login-user"><span class="caret"></span></div>
+              <div class="field" id="demo-login-pass"><span class="caret"></span></div>
+              <div class="fake-btn" id="demo-login-btn">Entrar</div>
+            </div>
+
+            <div class="practice-card">
+              <h3>Busca</h3>
+              <div class="field" id="demo-search-input"><span class="caret"></span></div>
+              <div class="chip-grid" id="demo-search-chips"></div>
+            </div>
+
+            <div class="practice-card">
+              <h3>Carrossel de tecnologias</h3>
+              <div class="tech-slots" id="demo-tech-slots"></div>
+              <div class="tech-count">mostrando 3 de 7</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="seam"></div>
+
+      <section id="s6">
+        <div class="inner">
+          <h1 class="statement">Exercício</h1>
+          <p class="lede">Escolha um dos três exemplos da página anterior — login, busca ou carrossel — e escreva, em português, o passo a passo do algoritmo antes de escrever qualquer código.</p>
+          <p class="support">Nomeie a entrada, descreva a transformação em etapas curtas, e diga qual é a saída. Só depois disso, implemente. Se travar em sintaxe, o problema não é a sintaxe.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="nav">
+    <button class="nav-btn" id="prevBtn" aria-label="seção anterior">↑</button>
+    <div class="dots" id="dots"></div>
+    <button class="nav-btn" id="nextBtn" aria-label="próxima seção">↓</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
